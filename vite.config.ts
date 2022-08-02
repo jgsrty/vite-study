@@ -9,6 +9,9 @@ export default defineConfig({
   root: path.join(__dirname, "src"),
   plugins: [react()],
   css: {
+    modules: {
+      generateScopedName: "[name]__[local]__[hash:base64:5]",
+    },
     preprocessorOptions: {
       scss: {
         additionalData: `@import "${variablePath}";`,
